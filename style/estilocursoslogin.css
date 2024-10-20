@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    background-color: #F0F4F5;
+    background-color: #F0F4F5; /* cor de fundo da página */
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
 
 /* referente ao header início */
@@ -24,7 +24,6 @@ header {
 .buttons {
     display: flex;
     margin-right: 20px;
-
 }
 
 .buttons button {
@@ -55,6 +54,7 @@ header {
 
 .search {
     display: flex;
+    border-radius: 10px;
 }
 
 .search__toggle {
@@ -146,82 +146,69 @@ header {
     margin-bottom: 20px;
 }
 
-/* referente ao texto início */
-.container {
+/* referente ao cardinício */
+.container-card {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5px;
+}
+
+.container-texto {
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 5px;
     overflow: auto;
 }
 
-.imagem_esquerda {
-    width: 25%;
-    float: left;
-    margin-right: 15px;
-    clear: both;
-    border-radius: 15px; 
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:   #A4AFB2;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    width: 100%;
 }
 
-.imagem_direita {
-    width: 25%;
-    float: right;
-    margin-left: 15px;
-    clear: both;
-    border-radius: 15px; 
+.card-img {
+    width: 50%;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
 
-.texto {
+.card-titulo {
+    margin: 10px;
+}
+
+.card-texto {
+    border-radius: 15px;
+    margin: 5px;
     overflow: hidden;
     font-size: 18px;
-    display: flex;
-    line-height: 1.5;
-    text-indent: 3em;
-
-}
-
-h4 {
-    text-align: center;
-}
-
-/* referente ao texto fim */
-
-/* referente ao carrossel início */
-/* tamanho do carrossel */
-.swiper {
-    width: 70%;
-    height: 480px;
-    margin-bottom: 20px;
-
-}
-
-/* configurações da parte escrita */
-.swiper-slide {
-    text-align: center;
-    background: #A4AFB2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-}
-
-/* configurações das imagens*/
-.swiper-slide img {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    margin-top: 20px;
-    border-radius: 15px; 
-}
-
-.swiper-slide p {
-    margin: 10px;
-    display: flex;
-    overflow: hidden;
+    text-indent: 2em;
     text-align: justify;
-    text-indent: 1.5em;
+    width: 100%;
 }
-/* referente ao carrossel fim */
+
+/* configurações dos botões*/
+.button {
+    background-color: #A4AFB2;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.button:hover {
+    background-color: #b9c8cc;
+}
+/* referente ao card fim */
 
 /* referente ao footer */
 footer {
@@ -327,7 +314,7 @@ footer {
     padding: -13px;
     max-width: 600px;
   }
-  /* Elemento | http://127.0.0.1:5500/homelogin.html# */
+  
 /* alteracores feitas na web inspeçao*/
 
 body > header:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1) {
@@ -390,7 +377,4 @@ body > header:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1
   #itemList > li:nth-child(3) {
 
     background-color: #a8d6ff;
-  }
-  #toggleButton {
-    background-color: #b1dbff;
   }

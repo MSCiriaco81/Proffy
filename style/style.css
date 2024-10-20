@@ -71,3 +71,66 @@ body {
   min-width: initial;
   padding: 0.5rem;
 }
+/* alteracores feitas na web inspeçao*/
+
+body > header:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1) {
+
+  margin-left: 20px;
+}
+
+
+
+#search {
+
+  margin-top: 6px;
+}
+
+
+.buttons {
+
+  display: block ruby;
+}
+
+
+
+.buttons button {
+  color: white;
+}
+
+header {
+
+  color: #242323;
+}
+
+
+#toggleButton {
+
+  background-color: #b1dbff;
+}
+
+
+
+#itemList {
+
+  background-color: #0072d7;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+
+#itemList > li:nth-child(1) {
+
+  background-color: #a8d6ff;
+}
+
+
+#itemList > li:nth-child(2) {
+
+  background-color: #a8d6ff;
+}
+
+
+
+#itemList > li:nth-child(3) {
+
+  background-color: #a8d6ff;
+}

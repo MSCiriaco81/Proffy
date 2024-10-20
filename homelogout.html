@@ -12,34 +12,52 @@
 </head>
 <body>
     <header>
+
+        
         <div class="logo">
           <a href="homelogout.html">
             <img src="IMAGENS/logo1.png">
           </a>
         </div>
         <div class="buttons">
-  
+    
+           
         <div class="search">
             <button class="search__toggle" aria-label="Open search">Search</button>
             <form class="search__form" action="">
                 <label class="sr-only" for="search"></label>
-                <input type="search" id="search" placeholder="pesquisar cursos"/>
+                <input type="search" id="search" placeholder="&#128269; pesquisar cursos"/>
             </form>
         </div>
   
-        <div class="buttons">
-          <a href="homelogin.html">
-            <button>LOGOUT</button>
-          </a>
-        </div>   
-  
-        <div class="buttons">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-            </svg></button>
-        </div> 
-  
-      </header>
+        <h2 style="color: #fff; padding-left: 20px; padding-right: 20px;">Bem vindo!</h2>
+        <div class="buttommenu" style="margin: 20px; position: relative;">
+            <button id="toggleButton" style="background-color: #b1dbff; border: none; cursor: pointer; padding: 10px; border-radius: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+    
+            <!-- Lista sobreposta -->
+            <ul id="itemList" style="
+                list-style-type: none; 
+                padding: 0; 
+                margin: 0; 
+                display: none; 
+                position: absolute; 
+                top: 100%; /* Coloca a lista abaixo do botão */
+                right: 0; 
+                background-color: #b1dbff;
+                border: 1px solid #ccc; 
+                width: 150px; /* Define a largura da lista */">
+                
+
+                <li style="background-color: #b1dbff; padding: 10px;"><a href="homelogout.html">Home Page</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="sobrenóslogout.html"> Sobre Nós</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="cursoslogout.html"> Cursos </a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="index.html"> logout </a></li>            </ul>
+        </div>
+    </header>
 
     <!--texto apresentação-->
     <h1 class="titulo">Já conhece a PROFFY?</h1>
@@ -52,54 +70,54 @@
 
     <!--carrossel cursos-->
     <h1 class="titulo">Alguns dos nossos cursos são:</h1>
-  <!-- Swiper carrossel -->
-  <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-          <div class="swiper-slide">
-              <img src="IMAGENS/JAVA.jpg">
-              <h4>Curso de Java</h4>
-              <button class="button">Saiba mais!</button>
-          </div>
-          <div class="swiper-slide">
-              <img src="IMAGENS/HTML.jpg">
-              <h4>Curso de HTML</h4>
-              <button class="button">Saiba mais!</button>
-          </div>
-          <div class="swiper-slide">
-              <img src="IMAGENS/CSS.jpg">
-              <h4>Curso de CSS</h4>
-              <button class="button">Saiba mais!</button>
-          </div>
-          <div class="swiper-slide">
-              <img src="IMAGENS/JAVASCRIPT.jpg">
-              <h4>Curso de JavaScript</h4>
-              <button class="button">Saiba mais!</button>
-          </div>
-          <div class="swiper-slide">
-              <img src="IMAGENS/PYTHON.jpg">
-              <h4>Curso de Python</h4>
-              <button class="button">Saiba mais!</button>
-          </div>
-          <div class="swiper-slide">
-              <img src="IMAGENS/RUBY.jpg">
-              <h4>Curso de Ruby</h4>
-              <button class="button">Saiba mais!</button>
-          </div>
-          <div class="swiper-slide">
-              <img src="IMAGENS/PHP.jpg">
-              <h4>Curso de PHP</h4>
-              <button class="button">Saiba mais!</button>
-          </div>
-          <div class="swiper-slide">
-              <img src="IMAGENS/DEV WEB.jpg">
-              <h4>Curso de Dev Web</h4>
-              <button class="button">Saiba mais!</button>
-          </div>
+    <!-- Swiper carrossel -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="IMAGENS/Design Gráfico.jpg">
+                <h4>Design Gráfico</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Introdução à Programação.jpg">
+                <h4>Introdução à Programação</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Marketing Digital.jpg">
+                <h4>Marketing Digital</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Fotografia Digital.jpg">
+                <h4>Fotografia Digital</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Empreendedorismo.jpg">
+                <h4>Empreendedorismo</h4>
+                <button class="button">Conheça os professores!</button>
+                </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Inglês.jpg">
+                <h4>Inglês</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Inteligência Emocional.jpg">
+                <h4>Inteligência Emocional</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Edição de Imagens.jpg">
+                <h4>Edição de Imagens</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
 
  <!--card públicos-->
  <h1 class="titulo">Seja PROFFY</h1>
@@ -265,7 +283,18 @@
         </div>
     </div>
  </footer>
+ <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const itemList = document.getElementById('itemList');
 
+    toggleButton.addEventListener('click', function() {
+        if (itemList.style.display === "none" || itemList.style.display === "") {
+            itemList.style.display = "block"; // Mostra a lista
+        } else {
+            itemList.style.display = "none"; // Oculta a lista
+        }
+    });
+</script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

@@ -73,17 +73,30 @@ function login() {
     if (user) {
         alert("Login bem-sucedido!");
 
-        // Atualizar o nome no header
-        const headerLoginLink = document.getElementById('headerLoginLink');
-        headerLoginLink.innerText = `Bem-vindo, ${email}`;
-        headerLoginLink.onclick = null; // Remove a ação de abrir o modal após login
-        
-        // Aqui você pode fazer o redirecionamento para a próxima página, se necessário
+        // Enviar mensagem para a página principal para fechar o iframe e redirecionar
+        window.parent.postMessage({ action: 'loginSuccess', email: email }, '*');
+
     } else {
         alert("Credenciais inválidas.");
     }
 }
-
+// Ouvinte de mensagens vindas do iframe
+window.addEventListener('message', function(event) {
+    if (event.data.action === 'loginSuccess') {
+        // Fecha o modal
+        closeModal();
+        
+        // Atualiza o nome no header com o email do usuário logado
+        const headerLoginLink = document.getElementById('LOGIN'); // Use o id correto para o botão de login
+        if (headerLoginLink) {
+            headerLoginLink.innerText = `Bem-vindo, ${event.data.email}`;
+            headerLoginLink.onclick = null; // Remove a ação de abrir o modal após login
+        }
+        
+        // Redirecionar para a página de destino após o login
+        window.location.href = "homelogout.html"; // Substitua pela sua página de destino
+    }
+});
 
 function revealPassword() {
     const email = document.getElementById("forgotEmail").value;
@@ -147,3 +160,4 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
+

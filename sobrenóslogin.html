@@ -11,18 +11,21 @@
 </head>
 <body>
     <header>
+
+        
         <div class="logo">
-          <a href="homelogin.html">
+          <a href="index.html">
             <img src="IMAGENS/logo1.png">
           </a>
         </div>
         <div class="buttons">
-  
+    
+           
         <div class="search">
             <button class="search__toggle" aria-label="Open search">Search</button>
             <form class="search__form" action="">
                 <label class="sr-only" for="search"></label>
-                <input type="search" id="search" placeholder="pesquisar cursos"/>
+                <input type="search" id="search" placeholder="&#128269; pesquisar cursos"/>
             </form>
         </div>
   
@@ -31,13 +34,32 @@
             <button>LOGIN</button>
           </a>
         </div>   
-  
-        <div class="buttons">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-            </svg></button>
-        </div> 
-  
+        <div class="buttommenu" style="margin: 20px; position: relative;">
+            <button id="toggleButton" style="background-color: #b1dbff; border: none; cursor: pointer; padding: 10px; border-radius: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+    
+            <!-- Lista sobreposta -->
+            <ul id="itemList" style="
+                list-style-type: none; 
+                padding: 0; 
+                margin: 0; 
+                display: none; 
+                position: absolute; 
+                top: 100%; /* Coloca a lista abaixo do botão */
+                right: 0; 
+                background-color: #b1dbff;
+                border: 1px solid #ccc; 
+                width: 150px; /* Define a largura da lista */">
+                
+                <li style="background-color: #b1dbff; padding: 10px;"><a href="index.html">Home Page</a></li>
+                <li style="background-color: #b1dbff; padding: 10px;"><a href="#" onclick="openModal()">login</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="sobrenóslogin.html"> Sobre Nós</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="cursoslogin.html"> Cursos </a></li>
+            </ul>
+        </div>
       </header>
     <!-- Modal -->
     <div id="modal" class="modal">
@@ -67,7 +89,6 @@
             }
         }
     </script>
-
     <!--texto apresentação-->
     <h1 class="titulo">SOBRE NÓS</h1>
 
@@ -278,7 +299,18 @@
         </div>
     </div>
  </footer>
+ <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const itemList = document.getElementById('itemList');
 
+    toggleButton.addEventListener('click', function() {
+        if (itemList.style.display === "none" || itemList.style.display === "") {
+            itemList.style.display = "block"; // Mostra a lista
+        } else {
+            itemList.style.display = "none"; // Oculta a lista
+        }
+    });
+</script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -298,5 +330,6 @@
         },
       });
     </script>
+<script src="crud.js">  </script>
 </body>
 </html>
